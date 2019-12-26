@@ -4,6 +4,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const uuidv4 = require('uuid/v4');
 const {getEvents, getUsers, writeUsers} = require("../data/dataHelper");
+const {check, validationResult} = require('express-validator');
 // const usersFilePath = path.join(__dirname, "users.json");
 // const eventsFilePath = path.join(__dirname, "../events/events.json");
 
@@ -34,7 +35,16 @@ router.get("/:id", async (req, res) => {
     }
 })
 
-router.post("/", async (req, res) => {
+router.post("/",[
+    check('firstname').isLength({min:3}).withMessage('firstname required, minimum 3 chars'),
+    check('surname').isLength({min:3}).withMessage('surname required, minimum 3 chars'),
+    check('email').isEmail().withMessage('email required'),
+    check('timeOfArrival').exists()
+], async (req, res) => {
+    const errors = validationResult(req)
+    if(!errors.isEmpty()){
+        res.status('422').json({errors: errors.array()});
+    }
     const events = await getEvents();
     const users = await getUsers();
     const userInEvents = events.find(event => event._id === req.body.elementId)

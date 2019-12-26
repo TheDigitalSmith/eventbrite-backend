@@ -1,1 +1,22 @@
-[{"firstname":"Tash","surname":"Shamshul Baharin","email":"tash.aneiq@gmail.com","timeOfArrival":"20:00","elementId":"2e55ef35-2ecc-4ea9-abcf-0012cf261e22","createdAt":"2019-12-19T04:45:17.348Z","updatedAt":"2019-12-19T04:45:17.348Z","_id":"302f5777-c28c-4499-a8f6-3fa12c7ae29a"},{"firstname":"Diego","surname":"Banovaz","email":"diego@strive.com","timeOfArrival":"20:00","elementId":"2e55ef35-2ecc-4ea9-abcf-0012cf261e22","createdAt":"2019-12-19T04:47:54.983Z","updatedAt":"2019-12-19T04:47:54.983Z","_id":"24bb5a1d-98d2-494d-afce-454db2d4e746"}]
+[
+    {
+        "firstname": "Tash",
+        "surname": "Shamshul Baharin",
+        "email": "tash.aneiq@gmail.com",
+        "timeOfArrival": "20:00",
+        "elementId": "2e55ef35-2ecc-4ea9-abcf-0012cf261e22",
+        "createdAt": "2019-12-19T04:45:17.348Z",
+        "updatedAt": "2019-12-19T04:45:17.348Z",
+        "_id": "302f5777-c28c-4499-a8f6-3fa12c7ae29a"
+    },
+    {
+        "firstname": "Diego",
+        "surname": "Banovaz",
+        "email": "diego@strive.com",
+        "timeOfArrival": "20:00",
+        "elementId": "2e55ef35-2ecc-4ea9-abcf-0012cf261e22",
+        "createdAt": "2019-12-19T04:47:54.983Z",
+        "updatedAt": "2019-12-19T04:47:54.983Z",
+        "_id": "24bb5a1d-98d2-494d-afce-454db2d4e746"
+    }
+]
