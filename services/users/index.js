@@ -43,7 +43,7 @@ router.post("/",[
 ], async (req, res) => {
     const errors = validationResult(req)
     if(!errors.isEmpty()){
-        res.status('422').json({errors: errors.array()});
+        return res.status('422').json({errors: errors.array()});
     }
     const events = await getEvents();
     const users = await getUsers();

@@ -1,1 +1,27 @@
-[{"eventName":"Diego's Birthday","place":"Burj Khalifa","description":"Time to light the candles to the man who lit our hearts","createdAt":"2019-12-18T19:35:39.796Z","updatedAt":"2019-12-18T19:35:39.796Z","_id":"2e55ef35-2ecc-4ea9-abcf-0012cf261e22"},{"eventName":"New Years Eve Party!","place":"KLCC","description":"Time to light up the sky","createdAt":"2019-12-18T19:36:17.396Z","updatedAt":"2019-12-18T19:38:23.621Z","_id":"296f0ced-8d49-4a00-8989-cba4558e3b81"},{"eventName":"Christmas Party!","place":"North Pole, Santa's Old Mill","description":"dancing with the lights","imageURL":"","createdAt":"2019-12-19T04:36:05.740Z","updatedAt":"2019-12-19T04:38:13.535Z","_id":"79705353-25a0-428a-bcfb-4b92bcbd69d8"},{"place":"NorthPole","description":"Time to light the candles to the man who lit our hearts","imageURL":"","createdAt":"2019-12-26T16:46:11.947Z","updatedAt":"2019-12-26T16:46:11.947Z","_id":"f0c44557-157f-4d9a-a326-2641ea114092"}]
+[
+    {
+        "eventName": "Diego's Birthday",
+        "place": "Burj Khalifa",
+        "description": "Time to light the candles to the man who lit our hearts",
+        "createdAt": "2019-12-18T19:35:39.796Z",
+        "updatedAt": "2019-12-18T19:35:39.796Z",
+        "_id": "2e55ef35-2ecc-4ea9-abcf-0012cf261e22"
+    },
+    {
+        "eventName": "New Years Eve Party!",
+        "place": "KLCC",
+        "description": "Time to light up the sky",
+        "createdAt": "2019-12-18T19:36:17.396Z",
+        "updatedAt": "2019-12-18T19:38:23.621Z",
+        "_id": "296f0ced-8d49-4a00-8989-cba4558e3b81"
+    },
+    {
+        "eventName": "Christmas Party!",
+        "place": "North Pole, Santa's Old Mill",
+        "description": "dancing with the lights",
+        "imageURL": "",
+        "createdAt": "2019-12-19T04:36:05.740Z",
+        "updatedAt": "2019-12-19T04:38:13.535Z",
+        "_id": "79705353-25a0-428a-bcfb-4b92bcbd69d8"
+    }
+]
