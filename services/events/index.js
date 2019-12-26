@@ -6,6 +6,7 @@ const path = require ('path');
 const uuidv4 = require ('uuid/v4');
 const multer = require('multer');
 const {getEvents, getUsers, writeEvent} = require('../data/dataHelper')
+const {Transform} = require('json2csv');
 
 // const eventsFilePath = path.join(__dirname,"events.json");
 // const usersFilePath = path.join(__dirname,"../users.json");
@@ -46,6 +47,20 @@ router.get("/:id/attendees",async (req,res)=>{
     }else{
         res.status("404").send("No attendees found");
     }
+})
+
+router.get("/:id/attendees/csv",async (req,res)=>{
+    const attendees = await getUsers();
+    const filePath = path.join(__dirname,'attendees.json')
+    const attendeesForEvent = attendees.filter(attendee => attendee.elementId === req.params.id);
+    await fs.writeFile(filePath, JSON.stringify(attendeesForEvent))
+    const fields = ["firstname", "surname", "email"];
+    const opts = {fields};
+    const json2csv = new Transform (opts);
+
+    fs.createReadStream(filePath)
+    .pipe(json2csv)
+    .pipe(res);
 })
 
 const multerConfig = multer({});
