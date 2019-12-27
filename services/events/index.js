@@ -56,7 +56,7 @@ router.get("/:id/attendees/csv",async (req,res)=>{
     const attendees = await getUsers();
     const attendeesForEvent = attendees.filter(attendee => attendee.elementId === req.params.id);
     await fs.writeFile(filePath, JSON.stringify(attendeesForEvent))
-    const fields = ["firstname", "surname", "email"];
+    const fields = ["firstname", "surname", "email", "timeOfArrival"];
     const opts = {fields};
     const json2csv = new Transform (opts);
 
