@@ -50,8 +50,10 @@ router.get("/:id/attendees",async (req,res)=>{
 })
 
 router.get("/:id/attendees/csv",async (req,res)=>{
+    // const empty = {};
+    const filePath = path.join(__dirname,'attendees.json');
+    // await fs.writeFile(filepath, JSON.stringify(empty));
     const attendees = await getUsers();
-    const filePath = path.join(__dirname,'attendees.json')
     const attendeesForEvent = attendees.filter(attendee => attendee.elementId === req.params.id);
     await fs.writeFile(filePath, JSON.stringify(attendeesForEvent))
     const fields = ["firstname", "surname", "email"];

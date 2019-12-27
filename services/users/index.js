@@ -39,7 +39,8 @@ router.post("/",[
     check('firstname').isLength({min:3}).withMessage('firstname required, minimum 3 chars'),
     check('surname').isLength({min:3}).withMessage('surname required, minimum 3 chars'),
     check('email').isEmail().withMessage('email required'),
-    check('timeOfArrival').exists()
+    check('timeOfArrival').exists(),
+    check('elementId').exists()
 ], async (req, res) => {
     const errors = validationResult(req)
     if(!errors.isEmpty()){
